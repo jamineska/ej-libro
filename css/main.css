@@ -1,0 +1,143 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif; /* para que se cargue tipografia nativa del sistema en dispositivos apple :) */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(241, 249, 249);
+    color:  rgb(30, 41, 59);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh; /* altura de la ventana gráfica */
+}
+
+/* para el header*/
+.ficha-cabecera{
+    width: 100%;
+    max-width: 420px;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgb(226, 232, 240);
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.isbn {
+    font-size: 0.85rem;
+    color: rgb(100, 116, 139);
+}
+
+.estado {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.estado.disponible {
+    background-color: rgb(220, 252, 231);
+    color: rgb(22, 101, 52);
+}
+
+/*contenido principal (main)*/
+.contenedor {
+    width: 100%;
+    max-width: 420px;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgb(226, 232, 240);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: auto;
+}
+
+h1 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgb(100, 116, 139);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(241, 245, 249);
+    padding-bottom: 0.5rem;
+}
+
+.ficha h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    color: rgb(15, 23, 42);
+}
+
+.autor {
+    font-size: 0.95rem;
+    color: rgb(71, 85, 105);
+    margin-bottom: 1.5rem;
+}
+
+.controles {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer; /* transformará  la flecha habitual del ratón en una mano con el dedo índice señalando. Indicará visualmente que el botón se podrá pulsar */
+    transition: opacity 0.2s, background-color 0.2s; /* para suavizar los cambios de transparencia y de color de fondo de forma gradual, evitando salto visual brusco. */
+}
+
+.btn-primario {
+    background-color: rgb(37, 99, 235);
+    color: rgb(255, 255, 255);
+}
+
+.btn-primario:hover:not(:disabled) { /* hover: (se aplica cuando el usuario aitua el puntero del raton sobre el botón. not: es creado para excepcion a la regla anterior. disabled: que el botón tenga atributo deshabilitado activado desde JS. */
+    background-color: rgb(29, 78, 216);
+}
+
+.btn-secundario {
+    background-color: rgb(71, 85, 105);
+    color: rgb(255, 255, 255);
+}
+
+.btn-secundario:hover:not(:disabled) { /* hover: (se aplica cuando el usuario aitua el puntero del raton sobre el botón. not: es creado para excepcion a la regla anterior. disabled: que el botón tenga atributo deshabilitado activado desde JS. */
+    background-color: rgb(51, 65, 85);
+}
+
+footer {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: rgb(226, 232, 240);
+    color: rgb(71, 85, 105) ;
+    text-align: center; 
+    font-size: 0.85rem ;
+}
+
+footer p {
+    margin-bottom: 0.35rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/*adaptación para pantallas medias y móviles*/
+ 
+@media (max-width:768px) {
+    
+}

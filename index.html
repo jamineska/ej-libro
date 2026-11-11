@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,32 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <!--Encabezado principal-->
+    <header class="ficha-cabecera">
+        <span class="isbn">ISBN:
+            <strong id="libro-isbn"></strong>
+        </span>
+        <span id="libro-estado" class="estado"></span>
+    </header>
+    <!--Contenido principal de la página-->
+    <main class="contenedor">
+        <h1>Ficha de Libro</h1>
 
-    
+        <section class="ficha">
+            <h2 id="libro-titulo"></h2>
+            <p class="autor">Autor: <span id="libro-autor"></span></p>
 
-<script src="js/main.js"></script>
+            <div class="controles">
+                <button id="btn-prestar" class="btn btn-primario">Prestar</button>
+                <button id="btn-devolver" class="btn btn-secundario">Devolver</button>
+            </div>
+        </section>
+    </main>
+    <!--Pie de página-->
+    <footer>
+        <p>&copy; 2026 Registrate en el club. Todos los derechos reservados.</p>
+        <p><a href="mailto:contacto@mipaginaweb.com">contacto@mipaginaweb.com</a></p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
