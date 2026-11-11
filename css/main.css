@@ -139,5 +139,37 @@ footer a:hover {
 /*adaptación para pantallas medias y móviles*/
  
 @media (max-width:768px) {
-    
+.ficha-cabecera {
+    width: 92%;
+    max-width: none;
+     margin-top: 1.25rem;
+    padding: 1rem; 
+}
+
+.contenedor {
+    width: 92%;
+    max-width: none;
+    padding: 1.25rem;
+}
+
+.ficha h2 {
+    font-size: 1.2rem;
+}
+
+.controles {
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+}
+
+footer {
+    padding: 1.25rem 1rem;
+    margin-top: 1.5rem;
+}
+
 }
