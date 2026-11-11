@@ -105,6 +105,11 @@ h1 {
     transition: opacity 0.2s, background-color 0.2s; /* para suavizar los cambios de transparencia y de color de fondo de forma gradual, evitando salto visual brusco. */
 }
 
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 .btn-primario {
     background-color: rgb(37, 99, 235);
     color: rgb(255, 255, 255);
