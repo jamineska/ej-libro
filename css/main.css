@@ -50,6 +50,11 @@ body {
     color: rgb(22, 101, 52);
 }
 
+.estado.prestado {
+    background-color: rgb(254, 226, 226);
+    color: rgb(153, 27, 27);
+}
+
 /*contenido principal (main)*/
 .contenedor {
     width: 100%;

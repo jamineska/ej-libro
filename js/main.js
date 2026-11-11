@@ -22,7 +22,7 @@ libro.getEstado(); // "Prestado"*/
 
 //Empecemos
 
-//1º creamos la definición de la clase Libro 
+//1º creamos la definición de la clase Libro (POO)
 class Libro {
     constructor(titulo, autor, isbn) {
         this.titulo = titulo;
@@ -48,9 +48,7 @@ class Libro {
     }
 }
 
-//2ª iniciamos programa
-document.addEventListener("DomContentLoaded", () => {
-//3º cogemos los elementos del html
+//2º cogemos los elementos del html
 
 const uiTitulo = document.querySelector("#libro-titulo");
 const uiAutor = document.querySelector("#libro-autor");
@@ -59,12 +57,22 @@ const uiEstado = document.querySelector("#libro-estado");
 const btnPrestar = document.querySelector("#btn-prestar");
 const btnDevolver = document.querySelector("#btn-devolver");
 
-//4º instacia del ojeto (libro actual)
+//3º instacia del ojeto (libro actual)
 const libroActual = new Libro("Cien años de soledad", "Gabriel García Márquez", "11111");
-})
+
+//4º eventos de interacción, activando botones (clicks)
+btnPrestar.addEventListener("click", function() {
+    libroActual.prestar();
+    pintarFicha();
+});
+
+btnDevolver.addEventListener("click", function() {
+    libroActual.devolver();
+    pintarFicha();
+});
 
 //5º creamos la función para pintar nustro dato y cambiar de color de la etiqueta y el bloqueo de los botones según corresponda.
-function renderizarFicha() {
+function pintarFicha() {
     uiTitulo.textContent = libroActual.titulo;
     uiAutor.textContent = libroActual.autor;
     uiIsbn.textContent = libroActual.isbn;
@@ -77,17 +85,14 @@ function renderizarFicha() {
         btnPrestar.disabled = false;
         btnDevolver.disabled = true;
     } else {
-        uiEstado.className = "estado prestado";
+       uiEstado.className = "estado prestado";
         btnPrestar.disabled = true;
         btnDevolver.disabled = false;
     }
 }
 
-
-//6º eventos de interacción (clicks)
-
-
-//7ª pintar la ficha
+//6ª pintar la ficha
+pintarFicha();
 
 
 
